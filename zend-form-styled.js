@@ -3,7 +3,7 @@
  * Javascript fixes, jquery required!
  * Here is everything needed for proper Zend_Form rendering that I couldn't achieve in CSS...
  * @author Wojtek Iskra wojtek@domeq.net
- * @version 1.0, 2011-03-19
+ * @version 1.0.1, 2011-05-05
  */
 
 $(document).ready(function() {
@@ -87,5 +87,10 @@ $(document).ready(function() {
     /**
      * Adding 'submit' class to button's container
      */
-    $('input[type=submit]').parent().addClass('submit-container');
+    $("input[type='submit']").parent().addClass('submit-container');
+    
+    /**
+     * Hiding dt element with label for hidden input fields - rather useless
+     */
+    $("input[type='hidden']").parent().prev().hide();
 });
